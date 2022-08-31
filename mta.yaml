@@ -15,10 +15,10 @@ modules:
   - name: risk-management-srv
     type: nodejs
     path: gen/srv
-    parameters:
-      buildpack: nodejs_buildpack
-    build-parameters:
-      builder: npm-ci
+ #   parameters:
+ #     buildpack: nodejs_buildpack
+ #   build-parameters:
+ #     builder: npm-ci
     provides:
       - name: srv-api # required by consumers of CAP services (e.g. approuter)
         properties:
@@ -48,9 +48,7 @@ resources:
       service: xsuaa
       service-plan: application
       path: ./xs-security.json
-      config:
-        xsappname: risk-management-${org}-${space}
-        tenant-mode: dedicated
+
   - name: risk-management-destination-service
     type: org.cloudfoundry.managed-service
     parameters:
