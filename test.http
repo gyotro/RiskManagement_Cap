@@ -1,0 +1,13 @@
+
+POST http://localhost:4004/service/risk/Mitigations
+Content-Type: application/json
+{
+      "createdBy": "SYSTEM",
+      "modifiedBy": "gyo",
+      "ID": "20466967-7d57-4e76-b14c-e53fd97dcb11",
+      "descr": "SLA gyo",
+      "owner": "suitable BuPa",
+      "timeline": "Q2 2020"
+    }
+###
+GET http://localhost:4004/service/risk/Mitigations
